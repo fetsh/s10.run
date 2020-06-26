@@ -10,6 +10,7 @@ var colors = { 0: "gray", 1: "green", 2: "blue", 3: "green" };
 var calendars = $(".row.training.seven-cols");
 var prev_calendar = calendars.first();
 var prev_calendar_source = prev_calendar.find('.col-sm-1').toArray().map(x => source.find(y => y.text == x.innerText.split("\n")[1]));
+var prev_calendar_source = prev_calendar.find('.col-sm-1').toArray().map(x => source.find(y => y.text == x.innerHTML.split("<br>")[1].trim()));
 
 var controlsDiv = $("<div class='row training' style='padding: 10px; 30px; text-align: center;'></div>");
 var copyLink = $("<a style='cursor: pointer;'>Скопировать</a>");
